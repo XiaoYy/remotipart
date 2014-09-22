@@ -14,8 +14,8 @@ module Remotipart
       render_without_remotipart *args
       if remotipart_submitted?
         textarea_body = response.content_type == 'text/html' ? html_escape(response.body) : response.body
-        response.body = %{<textarea data-type=\"#{response.content_type}\" data-status=\"#{response.response_code}\" data-statusText=\"#{response.message}\">#{textarea_body}</textarea>}
-        response.content_type = Mime::HTML
+        # response.body = %{<textarea data-type=\"#{response.content_type}\" data-status=\"#{response.response_code}\" data-statusText=\"#{response.message}\">#{textarea_body}</textarea>}
+        response.content_type = Mime::JSON
       end
       response_body
     end

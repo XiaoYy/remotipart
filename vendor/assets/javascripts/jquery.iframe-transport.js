@@ -149,7 +149,7 @@
       // Add a hidden `X-Requested-With` field with the value `IFrame` to the
       // field, to help server-side code to determine that the upload happened
       // through this transport.
-      $("<input type='hidden' value='XMLHttpRequest' name='X-Requested-With' />").
+      $("<input type='hidden' value='IFrame' name='X-Requested-With' />").
         appendTo(form);
 
       // Borrowed straight from the JQuery source
